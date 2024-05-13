@@ -20,8 +20,8 @@ public abstract class GenericController<T, DTO, ID, M extends EntityMapper<T, DT
     private M mapper;  // El mapper de MapStruct
 
     @PostMapping
-    public ResponseEntity<DTO> create(@RequestBody DTO dto) {
-        T entity = mapper.toEntity(dto);
+    public ResponseEntity<DTO> create(@RequestBody T entity) {
+
         T savedEntity = service.save(entity);
         DTO savedDto = mapper.toDto(savedEntity);
         return ResponseEntity.ok(savedDto);
