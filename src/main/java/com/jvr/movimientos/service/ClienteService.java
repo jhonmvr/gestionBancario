@@ -6,5 +6,5 @@ import com.jvr.movimientos.service.imp.GenericServiceImp;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ClienteService extends GenericServiceImp<Cliente,Integer, ClienteRepository> {
+public class ClienteService extends GenericServiceImp<Cliente, Integer, ClienteRepository> {
 }

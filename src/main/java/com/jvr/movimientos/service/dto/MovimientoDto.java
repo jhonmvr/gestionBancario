@@ -1,7 +1,6 @@
 package com.jvr.movimientos.service.dto;
 
 import lombok.Data;
-import lombok.Value;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

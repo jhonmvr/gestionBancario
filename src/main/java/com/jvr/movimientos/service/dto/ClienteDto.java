@@ -1,6 +1,6 @@
 package com.jvr.movimientos.service.dto;
 
-import lombok.*;
+import lombok.Data;
 
 import java.io.Serializable;
 
