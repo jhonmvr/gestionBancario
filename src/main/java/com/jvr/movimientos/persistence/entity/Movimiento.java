@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.Instant;
 
@@ -12,7 +11,7 @@ import java.time.Instant;
 @Setter
 @Entity
 @Table(name = "movimientos")
-public class Movimiento implements Serializable {
+public class Movimiento {
     @Id
     @Column(name = "movimiento_id", nullable = false)
     private Integer id;

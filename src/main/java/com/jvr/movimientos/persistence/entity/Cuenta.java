@@ -7,14 +7,13 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Getter
 @Setter
 @Entity
 @Table(name = "cuenta")
-public class Cuenta implements Serializable {
+public class Cuenta {
     @Id
     @Column(name = "numero_cuenta", nullable = false)
     private Integer id;

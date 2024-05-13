@@ -7,16 +7,14 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.io.Serializable;
-
 @Getter
 @Setter
 @Entity
 @Table(name = "persona")
-public class Persona implements Serializable {
+public class Persona {
     @Id
-    @Column(name = "identificacion", nullable = false)
-    private Integer id;
+    @Column(name = "identificacion", nullable = false, length = 10)
+    private String identificacion;
 
     @Column(name = "nombre", length = 100)
     private String nombre;

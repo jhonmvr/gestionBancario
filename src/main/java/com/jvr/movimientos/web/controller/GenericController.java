@@ -4,6 +4,7 @@ import com.jvr.movimientos.service.GenericService;
 import com.jvr.movimientos.service.mapper.EntityMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,10 +13,10 @@ import java.util.stream.Collectors;
 
 public abstract class GenericController<T, DTO, ID, M extends EntityMapper<T, DTO>> {
 
-    @Autowired(required=true)
+    @Autowired
     private GenericService<T, ID> service;
 
-    @Autowired(required=true)
+    @Autowired
     private M mapper;  // El mapper de MapStruct
 
     @PostMapping
