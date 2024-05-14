@@ -43,8 +43,7 @@ public abstract class GenericController<T, DTO, ID, M extends EntityMapper<T, DT
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<DTO> update(@PathVariable ID id, @RequestBody DTO dto) {
-        T entity = mapper.toEntity(dto);
+    public ResponseEntity<DTO> update(@PathVariable ID id, @RequestBody T entity) {
         try {
             T updatedEntity = service.update(id, entity);
             DTO updatedDto = mapper.toDto(updatedEntity);

@@ -10,8 +10,10 @@ import java.math.BigDecimal;
  */
 @Data
 public class CuentaDto implements Serializable {
-    Integer id;
+    Integer numeroCuenta;
     String tipoCuenta;
     BigDecimal saldoInicial;
     Boolean estado;
+    String nombre;
+    String identificacion;
 }

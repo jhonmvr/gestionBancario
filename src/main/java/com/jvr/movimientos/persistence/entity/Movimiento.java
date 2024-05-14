@@ -1,5 +1,6 @@
 package com.jvr.movimientos.persistence.entity;
 
+import com.jvr.movimientos.persistence.enums.TipoMovimientoEnum;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,8 +20,9 @@ public class Movimiento {
     @Column(name = "fecha")
     private Instant fecha;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "tipo_movimiento", length = 50)
-    private String tipoMovimiento;
+    private TipoMovimientoEnum tipoMovimiento;
 
     @Column(name = "valor", precision = 10, scale = 2)
     private BigDecimal valor;

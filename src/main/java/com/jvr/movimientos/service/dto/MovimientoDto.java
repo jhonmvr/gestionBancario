@@ -16,4 +16,5 @@ public class MovimientoDto implements Serializable {
     String tipoMovimiento;
     BigDecimal valor;
     BigDecimal saldo;
+    Integer numeroCuenta;
 }

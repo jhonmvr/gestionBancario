@@ -1,9 +1,6 @@
 package com.jvr.movimientos.persistence.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,7 +13,7 @@ import java.math.BigDecimal;
 public class Cuenta {
     @Id
     @Column(name = "numero_cuenta", nullable = false)
-    private Integer id;
+    private Integer numeroCuenta;
 
     @Column(name = "tipo_cuenta", length = 50)
     private String tipoCuenta;
@@ -26,5 +23,9 @@ public class Cuenta {
 
     @Column(name = "estado")
     private Boolean estado;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "clienteid")
+    private Cliente clienteid;
 
 }
