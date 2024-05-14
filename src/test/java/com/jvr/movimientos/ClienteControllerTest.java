@@ -47,14 +47,14 @@ public class ClienteControllerTest {
 
     @Test
     public void testCreateNuevoCliente() throws Exception {
-        ClienteDto clienteDto = new ClienteDto();  // Asume que tienes un constructor adecuado o setters
+        ClienteDto clienteDto = new ClienteDto();
         clienteDto.setNombre("John Doe");
         clienteDto.setDireccion("1234 Elm Street");
         clienteDto.setTelefono("555-1234");
         clienteDto.setEstado(true);
 
        // given(clienteService.createNuevoCliente(any(ClienteDto.class))).willReturn(clienteDto);
-       // given(clienteMapper.toDto(any(Cliente.class))).willReturn(clienteDto);  // Solo necesario si se realiza mapeo en el controlador
+       // given(clienteMapper.toDto(any(Cliente.class))).willReturn(clienteDto);
 
        // this.mockMvc.perform(get("/"))
         //        .andDo(print()).andExpect(status().isOk())
