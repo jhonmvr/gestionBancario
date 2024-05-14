@@ -18,3 +18,13 @@ Genera un reporte de estado de cuenta que incluye:
 Este reporte se puede obtener mediante:
 
 GET http://localhost:8080/api/v1/movimientos/reporte?fechaInicio={fechaInicio}&fechaFin={fechaFin}&identificacion={identificacion}
+
+## Documentación de la API
+
+La documentación interactiva de la API está disponible a través de Swagger UI. Puedes acceder a ella navegando a la siguiente URL después de iniciar la aplicación:
+
+[Swagger UI](http://localhost:8080/api/v1/swagger-ui/index.html)
+
+Este enlace te permitirá explorar los endpoints disponibles, probarlos directamente desde tu navegador y ver las respuestas de la API en tiempo real.
+
+![img_1.png](img_1.png)
